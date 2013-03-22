@@ -1,0 +1,7 @@
+---
+title     : 'Page Title'
+layout    : page
+category  : 'category'
+nav       : 'root'
+order     : 2
+---

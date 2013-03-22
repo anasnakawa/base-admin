@@ -40,37 +40,141 @@
 	<% styles = [] %>
 	<% styles.push( '/components/bootstrap-sass/bootstrap-2.3.1.css' ) %>
 	<% styles.push( '/components/bootstrap-sass/bootstrap-responsive-2.3.1.css' )%>
-	<%- @getBlock('styles').add( styles ).toHTML() %>
+	<% styles.push( '/components/font-awesome/css/font-awesome.css' ) %>
+	<% styles.push( '/styles/app-ltr.css' )%>
+	<%- @getBlock( 'styles' ).add( styles ).toHTML() %>
 </head>
 <body>
 	<!-- Markup -->
 	<div class="navbar navbar-fixed-top">
 		<div class="navbar-inner">
 			<div class="container">
-				<a class="brand" href="/">Welcome</a>
-				<ul class="nav">
-					<% for document in @getCollection('pages').toJSON(): %>
-						<li typeof="sioc:Page" about="<%= document.url %>" class="<%= 'active'  if @document.url is document.url %>">
-							<a href="<%= document.url %>" property="dc:title"><%= document.title %></a>
-						</li>
-					<% end %>
-				</ul>
-			</div>
-		</div>
-	</div>
+			  
+			  <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+			  
+				<a class="brand" href="/">Base Admin</a>
+				<div class="nav-collapse collapse">
+				  <ul class="nav pull-right">
+            
+            <li>
+              <a href="#">
+                <i class="icon-bullhorn"></i>
+                <span class="badge badge-important">10</span>
+              </a>
+            </li>
+            
+            <li class="divider-vertical"></li>
+            
+            <li>
+              <a href="">
+                <i class="icon-envelope"></i>
+                <span class="badge badge-important">15</span>
+              </a>
+            </li>
+				    
+				    <li class="divider-vertical"></li>
+				    
+				    <li class="dropdown">
+				      
+				      <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <img data-src="holder.js/16x16" />
+                John Doe
+                <b class="caret"></b>
+              </a>
+              
+              <ul class="dropdown-menu">
+                
+                <li>
+                  <a href="#">
+                    <i class="icon-user"></i>
+                    Your Profile
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="#">
+                    <i class="icon-circle-arrow-up"></i>
+                    Upgrade <span class="label label-warning">Pro</span>
+                  </a>
+                </li>
+                
+                <li class="divider"></li>
+                
+                <li>
+                  <a href="#">
+                    <i class="icon-cogs"></i>
+                    Account Settings
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/login.html">
+                    <i class="icon-signout"></i>
+                    Log Out
+                  </a>
+                </li>
+                
+              </ul>
+				    </li> <!-- .dropdown account -->
+            <!-- <% for document in @getCollection( 'pages' ).toJSON(): %>
+              <li typeof="sioc:Page" about="<%= document.url %>" class="<%= 'active'  if @document.url is document.url %>">
+                <a href="<%= document.url %>" property="dc:title"><%= document.title %></a>
+              </li>
+            <% end %> -->
+          </ul> <!-- .nav -->
+				</div><!-- .nav-collapse -->
+			</div> <!-- .container -->
+		</div> <!-- .navbar-inner -->
+	</div> <!-- .navbar-fixed-top -->
 	<div class="container">
-		<section id="content" class="content">
-			<%- @content %>
-		</section>
+	  
+	  <div class="row">
+	    <div class="span3">
+	      <ul class="nav nav-tabs nav-stacked">
+        <% for document in @getDatabase().findAll( nav: 'root', hidden: $exists: false, [order: 1] ).toJSON(): %>
+          <li class="<%= 'active' if @document.url is document.url %>">
+            <a href="<%= document.url %>" property="dc:title"><%= document.title %></a>
+          </li>
+        <% end %>
+        </ul> <!-- .nav -->
+	    </div> <!-- .span3 -->
+	    <div id="content" class="span9 content">
+	      <%- @content %>
+	    </div> <!-- .content-->
+	  </div> <!-- .row -->
 		<footer>
-			<p>&copy; Company 2012</p>
-			<p style="float:right;">
-				This website was last updated at <%= @site.date.toISOString() %>
+		  <hr />
+			<p style="float: left;">&copy; Base Admin <%= @site.date.getFullYear() %></p>
+			<p style="float: right;">
+				<i class="muted">updated at </i><%= @site.date.toString() %>
 			</p>
 		</footer>
 	</div><!-- /container -->
 
 	<!-- Scripts -->
-	<%- @getBlock('scripts').add(["/vendor/jquery.js","/vendor/log.js","/vendor/modernizr.js","/scripts/script.js"]).toHTML() %>
+	<% scripts = [] %>
+	<% scripts.push( '/components/jquery/jquery.js' ) %>
+	<% scripts.push( '/components/bootstrap-sass/js/bootstrap-transition.js' ) %>
+	<% scripts.push( '/components/bootstrap-sass/js/bootstrap-alert.js' ) %>
+	<% scripts.push( '/components/bootstrap-sass/js/bootstrap-modal.js' ) %>
+	<% scripts.push( '/components/bootstrap-sass/js/bootstrap-dropdown.js' ) %>
+	<% scripts.push( '/components/bootstrap-sass/js/bootstrap-scrollspy.js' ) %>
+	<% scripts.push( '/components/bootstrap-sass/js/bootstrap-tab.js' ) %>
+	<% scripts.push( '/components/bootstrap-sass/js/bootstrap-tooltip.js' ) %>
+	<% scripts.push( '/components/bootstrap-sass/js/bootstrap-popover.js' ) %>
+	<% scripts.push( '/components/bootstrap-sass/js/bootstrap-button.js' ) %>
+	<% scripts.push( '/components/bootstrap-sass/js/bootstrap-collapse.js' ) %>
+	<% scripts.push( '/components/bootstrap-sass/js/bootstrap-carousel.js' ) %>
+	<% scripts.push( '/components/bootstrap-sass/js/bootstrap-typeahead.js' ) %>
+	<% scripts.push( '/components/bootstrap-sass/js/bootstrap-affix.js' ) %>
+	<% scripts.push( '/components/holderjs/holder.js' ) %>
+	<% scripts.push( '/vendor/log.js' ) %>
+	<% scripts.push( '/vendor/modernizr.js' ) %>
+	<% scripts.push( '/scripts/script.js' ) %>
+	<%- @getBlock( 'scripts' ).add( scripts ).toHTML() %>
 </body>
 </html>

@@ -1,0 +1,9 @@
+---
+title     : 'Dashboard'
+layout    : page
+category  : 'dashboard'
+nav       : 'root'
+order     : 1
+---
+
+<h2><%= @document.meta.title %></h2>

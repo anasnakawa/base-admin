@@ -40,31 +40,110 @@
     
     
     
-    <link rel="stylesheet" href="/components/bootstrap-sass/bootstrap-2.3.1.css" /><link rel="stylesheet" href="/components/bootstrap-sass/bootstrap-responsive-2.3.1.css" />
+    
+    
+    <link rel="stylesheet" href="/components/bootstrap-sass/bootstrap-2.3.1.css" /><link rel="stylesheet" href="/components/bootstrap-sass/bootstrap-responsive-2.3.1.css" /><link rel="stylesheet" href="/components/font-awesome/css/font-awesome.css" /><link rel="stylesheet" href="/styles/app-ltr.css" />
 </head>
 <body>
     <!-- Markup -->
     <div class="navbar navbar-fixed-top">
         <div class="navbar-inner">
             <div class="container">
-                <a class="brand" href="/">Welcome</a>
-                <ul class="nav">
+              
+              <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+              
+                <a class="brand" href="/">Base Admin</a>
+                <div class="nav-collapse collapse">
+                  <ul class="nav pull-right">
+            
+            <li>
+              <a href="#">
+                <i class="icon-bullhorn"></i>
+                <span class="badge badge-important">10</span>
+              </a>
+            </li>
+            
+            <li class="divider-vertical"></li>
+            
+            <li>
+              <a href="">
+                <i class="icon-envelope"></i>
+                <span class="badge badge-important">15</span>
+              </a>
+            </li>
                     
-                        <li typeof="sioc:Page" about="/pages/hello" class="">
-                            <a href="/pages/hello" property="dc:title">This is a Page</a>
-                        </li>
+                    <li class="divider-vertical"></li>
                     
-                        <li typeof="sioc:Page" about="/pages/posts" class="">
-                            <a href="/pages/posts" property="dc:title">Posts</a>
-                        </li>
-                    
-                </ul>
-            </div>
-        </div>
-    </div>
+                    <li class="dropdown">
+                      
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <img data-src="holder.js/16x16" />
+                John Doe
+                <b class="caret"></b>
+              </a>
+              
+              <ul class="dropdown-menu">
+                
+                <li>
+                  <a href="#">
+                    <i class="icon-user"></i>
+                    Your Profile
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="#">
+                    <i class="icon-circle-arrow-up"></i>
+                    Upgrade <span class="label label-warning">Pro</span>
+                  </a>
+                </li>
+                
+                <li class="divider"></li>
+                
+                <li>
+                  <a href="#">
+                    <i class="icon-cogs"></i>
+                    Account Settings
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="/login.html">
+                    <i class="icon-signout"></i>
+                    Log Out
+                  </a>
+                </li>
+                
+              </ul>
+                    </li> <!-- .dropdown account -->
+            <!--  -->
+          </ul> <!-- .nav -->
+                </div><!-- .nav-collapse -->
+            </div> <!-- .container -->
+        </div> <!-- .navbar-inner -->
+    </div> <!-- .navbar-fixed-top -->
     <div class="container">
-        <section id="content" class="content">
-            <!-- Main hero unit for a primary marketing message or call to action -->
+      
+      <div class="row">
+        <div class="span3">
+          <ul class="nav nav-tabs nav-stacked">
+        
+          <li class="">
+            <a href="/dashboard/index.html" property="dc:title">Dashboard</a>
+          </li>
+        
+          <li class="">
+            <a href="/charts/index.html" property="dc:title">Charts</a>
+          </li>
+        
+        </ul> <!-- .nav -->
+        </div> <!-- .span3 -->
+        <div id="content" class="span9 content">
+          <!-- Main hero unit for a primary marketing message or call to action -->
 <div class="hero-unit">
     <h1>Welcome to your new site!</h1>
     <p>
@@ -91,16 +170,37 @@
         <p><a class="btn" href="http://twitter.github.com/bootstrap/">Visit Website</a></p>
     </div>
 </div>
-        </section>
+        </div> <!-- .content-->
+      </div> <!-- .row -->
         <footer>
-            <p>&copy; Company 2012</p>
-            <p style="float:right;">
-                This website was last updated at 2013-03-21T17:44:46.835Z
+          <hr />
+            <p style="float: left;">&copy; Base Admin 2013</p>
+            <p style="float: right;">
+                <i class="muted">updated at </i>Fri Mar 22 2013 17:43:42 GMT+0400 (GST)
             </p>
         </footer>
     </div><!-- /container -->
 
     <!-- Scripts -->
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <script >(function(){
 	// Did we just livereload?
 var log = true && localStorage && console && console.log && true;
@@ -135,6 +235,6 @@ var inject = function(){
 };
 		inject();
 	}
-})();</script><script defer="defer"  src="/vendor/jquery.js"></script><script defer="defer"  src="/vendor/log.js"></script><script defer="defer"  src="/vendor/modernizr.js"></script><script defer="defer"  src="/scripts/script.js"></script>
+})();</script><script defer="defer"  src="/components/jquery/jquery.js"></script><script defer="defer"  src="/components/bootstrap-sass/js/bootstrap-transition.js"></script><script defer="defer"  src="/components/bootstrap-sass/js/bootstrap-alert.js"></script><script defer="defer"  src="/components/bootstrap-sass/js/bootstrap-modal.js"></script><script defer="defer"  src="/components/bootstrap-sass/js/bootstrap-dropdown.js"></script><script defer="defer"  src="/components/bootstrap-sass/js/bootstrap-scrollspy.js"></script><script defer="defer"  src="/components/bootstrap-sass/js/bootstrap-tab.js"></script><script defer="defer"  src="/components/bootstrap-sass/js/bootstrap-tooltip.js"></script><script defer="defer"  src="/components/bootstrap-sass/js/bootstrap-popover.js"></script><script defer="defer"  src="/components/bootstrap-sass/js/bootstrap-button.js"></script><script defer="defer"  src="/components/bootstrap-sass/js/bootstrap-collapse.js"></script><script defer="defer"  src="/components/bootstrap-sass/js/bootstrap-carousel.js"></script><script defer="defer"  src="/components/bootstrap-sass/js/bootstrap-typeahead.js"></script><script defer="defer"  src="/components/bootstrap-sass/js/bootstrap-affix.js"></script><script defer="defer"  src="/components/holderjs/holder.js"></script><script defer="defer"  src="/vendor/log.js"></script><script defer="defer"  src="/vendor/modernizr.js"></script><script defer="defer"  src="/scripts/script.js"></script>
 </body>
 </html>

@@ -1,0 +1,36 @@
+// ------------------------------
+// app main file
+// ------------------------------
+// author : anas.nakawa@gmail.com
+// license: MIT (http://opensource.org/licenses/mit-license.php)
+// ------------------------------
+
+// ------------------------------
+// table of content
+// ------------------------------
+// some title
+//  - sub title
+//  - sub title 2
+// some mixin
+// ------------------------------
+
+a, 
+a:link {
+  cursor: pointer;
+}
+
+@media ( min-width: 980px ) {
+  body {
+    padding-top: 60px;
+  }
+}
+
+
+table {
+  tfoot,
+  tbody {
+    th {
+      border-top: 1px solid #DDD;
+    }
+  }
+}

@@ -1,0 +1,9 @@
+---
+title     : 'Charts'
+layout    : page
+category  : 'charts'
+nav       : 'root'
+order     : 2
+---
+
+<h2><%= @document.meta.title %></h2>
