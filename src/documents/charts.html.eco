@@ -1,0 +1,21 @@
+---
+title     : 'Charts'
+layout    : page
+category  : 'charts'
+nav       : 'root'
+order     : 2
+jsFiles   : [ '/components/flot/jquery.flot.js', '/components/raphael/raphael.js', '/components/morris.js/morris.js', '/scripts/pages/page-charts.js' ]
+---
+
+<hr />
+
+<h3>jQuery Plot</h3>
+
+<div class="js-plot" style="width: auto; height: 400px;"></div>
+
+
+<hr />
+
+<h3>Morris.js Charts</h3>
+
+<div id="jsMorrisChart"></div>

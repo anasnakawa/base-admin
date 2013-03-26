@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <title>Your Website</title>
+    <title>Base Admin</title>
     <link href="http://website.com/atom.xml" rel="self"/>
     <link href="http://website.com"/>
-    <updated>2013-03-22T13:43:42.464Z</updated>
+    <updated>2013-03-26T15:54:20.764Z</updated>
     <id>http://website.com</id>
     <author>
-        <name>Your Name</name>
-        <email>your@email.com</email>
+        <name>Anas Nakawa</name>
+        <email>anas.nakawa@gmail.com</email>
     </author>
 
     

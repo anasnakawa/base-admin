@@ -1,0 +1,9 @@
+{
+  "name": "Flotr2",
+  "version": "0.0.0",
+  "commit": "d43f8566e84de3f3b7aa776dba3173a1246d438b",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/HumbleSoftware/Flotr2.git"
+  }
+}

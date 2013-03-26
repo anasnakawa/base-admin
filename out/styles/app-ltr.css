@@ -1,14 +1,18 @@
-a,
-a:link {
-  cursor: pointer;
-}
+// ------------------------------
+// application right to left interface
+// ------------------------------
+// author : anas.nakawa@gmail.com
+// license: MIT (http://opensource.org/licenses/mit-license.php)
+// ------------------------------
 
-@media (min-width: 980px) {
-  body {
-    padding-top: 60px;
-  }
-}
-table tfoot th,
-table tbody th {
-  border-top: 1px solid #DDD;
-}
+// ------------------------------
+// table of content
+// ------------------------------
+// importing resources
+// ------------------------------
+
+
+// importing resources
+// ------------------------------
+@import "../../files/components/bi-app-sass/bi-app/bi-app-ltr";
+@import "app";

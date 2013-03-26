@@ -21,7 +21,7 @@ docpadConfig = {
 			]
 
 			# The default title of our website
-			title: "Your Website"
+			title: "Base Admin"
 
 			# The website description (for SEO)
 			description: """
@@ -34,10 +34,10 @@ docpadConfig = {
 				"""
 
 			# The website author's name
-			author: "Your Name"
+			author: "Anas Nakawa"
 
 			# The website author's email
-			email: "your@email.com"
+			email: "anas.nakawa@gmail.com"
 
 
 
