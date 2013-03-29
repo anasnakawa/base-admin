@@ -15,106 +15,120 @@
   
   $(function() {
   
-    // strict mode
-    'use strict';
+      // strict mode
+      'use strict';
+      
+      // charts configurations
+      
+      // Morris.js
+      // ----------------
+      Morris.Line({
+        element: 'jsMorrisChart',
+        data: [
+          { y: '2006', a: 50, b: 40 },
+          { y: '2007', a: 75,  b: 65 },
+          { y: '2008', a: 50,  b: 40 },
+          { y: '2009', a: 75,  b: 65 },
+          { y: '2010', a: 50,  b: 40 },
+          { y: '2011', a: 75,  b: 65 },
+          { y: '2012', a: 50, b: 40 }
+        ],
+        xkey: 'y',
+        ykeys: ['a', 'b'],
+        labels: ['Series A', 'Series B'],
+        lineColors: ['#2BA6CB', '#222222']
+      });
     
-    // charts configurations
-    var sin = []
-    , cos = []
-    , configs = {}
-    , plot;
+     // Flot
+     // ----------------
+     var sin = [],
+          cos = [];
     
-    // initializing sin / cos arrays
-    for( var i = 0; i < 14; i += 0.5 ) {
-      sin.push( [ i, Math.sin( i ) ] );
-      cos.push( [ i, Math.cos( i ) ] );
-    }
-    
-    // plot configs
-    configs.plot = {
-      data: [
-        {
-            data: sin
-          , label: 'sin(x)'
-        }, {
-            data: cos
-          , label: 'cos(x)'
-        }
-      ]
-      , options: {
-        series: {
-            lines: { show: true }
-          , points: { show: true }
-        }
-        , grid: { hovertable: true, clickable: true }
-        , yaxis: { min: -1.2, max: 1.2 }
+      for (var i = 0; i < 14; i += 0.5) {
+          sin.push([i, Math.sin(i)]);
+          cos.push([i, Math.cos(i)]);
       }
-    }
     
-    // Morris.js
-    // ----------------
-    Morris.Line({
-      element: 'jsMorrisChart',
-      data: [
-        { y: '2006', a: 50, b: 40 },
-        { y: '2007', a: 75,  b: 65 },
-        { y: '2008', a: 50,  b: 40 },
-        { y: '2009', a: 75,  b: 65 },
-        { y: '2010', a: 50,  b: 40 },
-        { y: '2011', a: 75,  b: 65 },
-        { y: '2012', a: 50, b: 40 }
-      ],
-      xkey: 'y',
-      ykeys: ['a', 'b'],
-      labels: ['Series A', 'Series B'],
-      lineColors: ['#2BA6CB', '#222222']
+      var plot = $.plot("#placeholder", [
+        { data: sin, label: "sin(x)"},
+        { data: cos, label: "cos(x)"}
+    ], {
+        series: {
+            lines: {
+                show: true
+            },
+            points: {
+                show: true
+            }
+        },
+        grid: {
+            hoverable: true,
+            clickable: true
+        },
+        yaxis: {
+            min: -1.2,
+            max: 1.2
+        }
     });
     
-    // Flot
-    // ----------------
-    $('.js-plot').plot( configs.plot.data, configs.plot.options );
-      
-    function showTooltips(x, y, contents) {
-        $('<div class="tui-tooltip">' + contents + '</div>').css( {
-            position: 'absolute',
-            display: 'none',
-            top: y + 5,
-            left: x + 5,
-        }).appendTo("body").fadeIn(200);
-    }
-    
     function showTooltip(x, y, contents) {
-        debugger;
-        $('<div class="tui-tooltip">' + contents + '</div>').css( {
-            position: 'absolute',
-            display: 'none',
+        $("<div id='tooltip'>" + contents + "</div>").css({
+            position: "absolute",
+            display: "none",
             top: y + 5,
             left: x + 5,
-            'background-color': 'red',
-            color: 'white'
+            border: "1px solid #fdd",
+            padding: "2px",
+            "background-color": "#fee",
+            opacity: 0.80
         }).appendTo("body").fadeIn(200);
     }
     
-    $('.js-plot').on('plothover', function(e, pos, item) {
-      debugger;
-      var $self = $(this)
-      , previousPoint = $self.data('prev');
-      
-      if( item ) {
-        if( previousPoint !== item.dataIndex ) {
-          previousPoint = item.dataIndex;
-          
-          $('.tui-tooltip').remove();
-          var x = item.datapoint[0].toFixed(2)
-          , y = item.datapoint[1].toFixed(2);
-          
-          showTooltip( item.pageX, item.pageY, item.series.label + ' of ' + x + ' = ' + y );
+    var previousPoint = null;
+    $("#placeholder").bind("plothover", function (event, pos, item) {
+        
+        // tooltip always enabled
+        if (item) {
+            if (previousPoint != item.dataIndex) {
+    
+                previousPoint = item.dataIndex;
+    
+                $("#tooltip").remove();
+                var x = item.datapoint[0].toFixed(2),
+                y = item.datapoint[1].toFixed(2);
+    
+                showTooltip(item.pageX, item.pageY,
+                    item.series.label + " of " + x + " = " + y);
+            }
+        } else {
+            $("#tooltip").remove();
+            previousPoint = null;            
         }
-      } else {
-        $('.tui-tooltip').remove();
-        previousPoint = undefined;
-      }
-      $self.data('prev', previousPoint);
+    });
+    
+    // Chart.js
+    // --------
+    //Get context with jQuery - using jQuery's .get() method.
+    var ctx = $("#lineChart").get(0).getContext("2d");
+    //This will get the first returned node in the jQuery collection.
+    var myNewChart = new Chart(ctx).Line({
+      labels: ["January","February","March","April","May","June","July"],
+      datasets: [
+        {
+          fillColor : "rgba(220,220,220,0.5)",
+          strokeColor : "rgba(220,220,220,1)",
+          pointColor : "rgba(220,220,220,1)",
+          pointStrokeColor : "#fff",
+          data : [65,59,90,81,56,55,40]
+        },
+        {
+          fillColor : "rgba(151,187,205,0.5)",
+          strokeColor : "rgba(151,187,205,1)",
+          pointColor : "rgba(151,187,205,1)",
+          pointStrokeColor : "#fff",
+          data : [28,48,40,19,96,27,100]
+        }
+      ]
     });
   
   }); // end dom ready

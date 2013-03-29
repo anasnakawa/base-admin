@@ -1,6 +1,6 @@
 ---
-title     : 'Page Title'
-layout    : 'layout-1-column'
+title     : 'Log In'
+layout    : 'default'
 isHidden  : true
 ---
 

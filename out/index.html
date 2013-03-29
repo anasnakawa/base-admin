@@ -42,7 +42,7 @@
     
     
     
-    <link rel="stylesheet" href="/components/bootstrap-sass/bootstrap-2.3.1.css" /><link rel="stylesheet" href="/components/bootstrap-sass/bootstrap-responsive-2.3.1.css" /><link rel="stylesheet" href="/components/font-awesome/css/font-awesome.css" /><link rel="stylesheet" href="/styles/app-ltr.css" />
+    <link  rel="stylesheet" href="/components/bootstrap-sass/bootstrap-2.3.1.css" /><link  rel="stylesheet" href="/components/bootstrap-sass/bootstrap-responsive-2.3.1.css" /><link  rel="stylesheet" href="/components/font-awesome/css/font-awesome.css" /><link  rel="stylesheet" href="/css/app-ltr.css" />
 </head>
 <body>
     <!-- Markup -->
@@ -112,7 +112,7 @@
                 </li>
                 
                 <li>
-                  <a href="/login.html">
+                  <a href="/log-in.html">
                     <i class="icon-signout"></i>
                     Log Out
                   </a>
@@ -170,11 +170,11 @@
           </li>
         
           <li class="">
-            <a href="/charts/index.html" property="dc:title">Charts</a>
+            <a href="/charts.html" property="dc:title">Charts</a>
           </li>
         
           <li class="">
-            <a href="/charts.html" property="dc:title">Charts</a>
+            <a href="/charts/index.html" property="dc:title">Charts</a>
           </li>
          -->
         </ul> <!-- .nav -->
@@ -213,7 +213,7 @@
           <hr />
             <p style="float: left;">&copy; Base Admin 2013</p>
             <p style="float: right;">
-                <i class="muted">updated at </i>Tue Mar 26 2013 19:54:20 GMT+0400 (GST)
+                <i class="muted">updated at </i>Fri Mar 29 2013 11:52:26 GMT+0400 (GST)
             </p>
         </footer>
     </div><!-- /container -->
@@ -241,40 +241,6 @@
     
     
     
-    <script >(function(){
-	// Did we just livereload?
-var log = true && localStorage && console && console.log && true;
-if ( log && localStorage.getItem('/docpad-livereload/reloaded') === 'yes' ) {
-	localStorage.removeItem('/docpad-livereload/reloaded');
-	console.log('LiveReloaded at', new Date())
-}
-
-// Listen for the regenerated event
-// and perform a reload of the page when the event occurs
-var listen = function(){
-	var socket = io.connect('/docpad-livereload');
-	socket.on('regenerated',function(){
-		if ( log ) {
-	localStorage.setItem('/docpad-livereload/reloaded', 'yes');
-}
-document.location.reload();
-	});
-};
-	if ( typeof io !== 'undefined' ) {
-		listen();
-	} else {
-		// Inject socket.io into our page then listen once loaded
-var inject = function(){
-	var t = document.createElement('script');
-	t.type = 'text/javascript';
-	t.async = true;
-	t.src = '/socket.io/socket.io.js';
-	t.onload = listen;
-	var s = document.getElementsByTagName('script')[0];
-	s.parentNode.insertBefore(t,s);
-};
-		inject();
-	}
-})();</script><script defer="defer"  src="/vendor/log.js"></script><script defer="defer"  src="/vendor/modernizr.js"></script><script defer="defer"  src="/components/jquery/jquery.js"></script><script defer="defer"  src="/components/underscore/underscore.js"></script><script defer="defer"  src="/components/bootstrap-sass/js/bootstrap-transition.js"></script><script defer="defer"  src="/components/bootstrap-sass/js/bootstrap-alert.js"></script><script defer="defer"  src="/components/bootstrap-sass/js/bootstrap-modal.js"></script><script defer="defer"  src="/components/bootstrap-sass/js/bootstrap-dropdown.js"></script><script defer="defer"  src="/components/bootstrap-sass/js/bootstrap-scrollspy.js"></script><script defer="defer"  src="/components/bootstrap-sass/js/bootstrap-tab.js"></script><script defer="defer"  src="/components/bootstrap-sass/js/bootstrap-tooltip.js"></script><script defer="defer"  src="/components/bootstrap-sass/js/bootstrap-popover.js"></script><script defer="defer"  src="/components/bootstrap-sass/js/bootstrap-button.js"></script><script defer="defer"  src="/components/bootstrap-sass/js/bootstrap-collapse.js"></script><script defer="defer"  src="/components/bootstrap-sass/js/bootstrap-carousel.js"></script><script defer="defer"  src="/components/bootstrap-sass/js/bootstrap-typeahead.js"></script><script defer="defer"  src="/components/bootstrap-sass/js/bootstrap-affix.js"></script><script defer="defer"  src="/components/holderjs/holder.js"></script><script defer="defer"  src="/scripts/common/common-plugins.js"></script><script defer="defer"  src="/scripts/main.js"></script>
+    <script defer="defer"  src="/vendor/log.js"></script><script defer="defer"  src="/vendor/modernizr.js"></script><script defer="defer"  src="/components/jquery/jquery.js"></script><script defer="defer"  src="/components/underscore/underscore.js"></script><script defer="defer"  src="/components/bootstrap-sass/js/bootstrap-transition.js"></script><script defer="defer"  src="/components/bootstrap-sass/js/bootstrap-alert.js"></script><script defer="defer"  src="/components/bootstrap-sass/js/bootstrap-modal.js"></script><script defer="defer"  src="/components/bootstrap-sass/js/bootstrap-dropdown.js"></script><script defer="defer"  src="/components/bootstrap-sass/js/bootstrap-scrollspy.js"></script><script defer="defer"  src="/components/bootstrap-sass/js/bootstrap-tab.js"></script><script defer="defer"  src="/components/bootstrap-sass/js/bootstrap-tooltip.js"></script><script defer="defer"  src="/components/bootstrap-sass/js/bootstrap-popover.js"></script><script defer="defer"  src="/components/bootstrap-sass/js/bootstrap-button.js"></script><script defer="defer"  src="/components/bootstrap-sass/js/bootstrap-collapse.js"></script><script defer="defer"  src="/components/bootstrap-sass/js/bootstrap-carousel.js"></script><script defer="defer"  src="/components/bootstrap-sass/js/bootstrap-typeahead.js"></script><script defer="defer"  src="/components/bootstrap-sass/js/bootstrap-affix.js"></script><script defer="defer"  src="/components/holderjs/holder.js"></script><script defer="defer"  src="/scripts/common/common-plugins.js"></script><script defer="defer"  src="/scripts/main.js"></script>
 </body>
 </html>

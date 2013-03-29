@@ -1,0 +1,22 @@
+@media (min-width: 980px) {
+  /* line 16, ../sass/commons/_base.scss */
+  body {
+    padding-top: 60px;
+  }
+}
+/* line 19, ../sass/components/_chart-js.scss */
+.chart-js {
+  width: 100% !important;
+  height: auto !important;
+  max-width: 800px;
+}
+
+/* line 22, ../sass/components/_morris-js.scss */
+.class-name {
+  property: value;
+}
+
+/* line 27, ../sass/components/_morris-js.scss */
+#idName {
+  property: value;
+}

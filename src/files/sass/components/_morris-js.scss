@@ -1,0 +1,38 @@
+// ------------------------------
+// sass file description
+// ------------------------------
+// author : anas.nakawa@gmail.com
+// license: MIT (http://opensource.org/licenses/mit-license.php)
+// ------------------------------
+
+// ------------------------------
+// table of content
+// ------------------------------
+// some title
+//  - sub title
+//  - sub title 2
+// some mixin
+// ------------------------------
+
+
+// some title
+// ------------------------------
+
+// sub title
+.class-name {
+  property: value;
+}
+
+// sub title 2
+#idName {
+  property: value;
+}
+
+// some mixin
+// describe the mixin a bit
+//
+// * **param:** {type} paramName    what to do with this parameter
+// ------------------------------
+@mixin some-mixin($paramName) {
+  // some mixin logic here
+}
