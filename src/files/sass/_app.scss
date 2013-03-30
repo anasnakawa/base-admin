@@ -12,9 +12,14 @@
 // pages
 // ------------------------------
 
+// configurations & mixins
+// ------------------------------
+@import "mixins/media-queries";
+
 // base
 // ------------------------------
 @import "commons/base";
+@import "commons/side-nav";
 
 // pages
 // ------------------------------

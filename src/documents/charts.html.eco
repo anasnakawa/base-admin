@@ -1,13 +1,12 @@
 ---
 title     : 'Charts'
-layout    : page
+layout    : 'layout-app'
 category  : 'charts'
 nav       : 'root'
 order     : 2
 jsFiles   : [ '/components/flot/jquery.flot.js', '/components/raphael/raphael.js', '/components/morris.js/morris.js', '/components/Chart.js/Chart.js', '/scripts/pages/page-charts.js' ]
 ---
 
-<hr />
 <h3>jQuery Plot</h3>
 <div id="placeholder" class="js-plot" style="width: auto; height: 400px;"></div>
 

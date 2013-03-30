@@ -1,5 +1,5 @@
 // ------------------------------
-// base overrides
+// side navigation
 // ------------------------------
 // author : anas.nakawa@gmail.com
 // ------------------------------
@@ -7,18 +7,18 @@
 // ------------------------------
 // table of content
 // ------------------------------
-// responsive containers
+// some title
+//  - sub title
+//  - sub title 2
+// some mixin
 // ------------------------------
 
 
-// responsive containers
-@media ( min-width: 980px ) {
-  body {
-    padding-top: 60px;
+// some title
+// ------------------------------
+.nav-stacked {
+  .badge,
+  .label {
+    @include float( right );
   }
-}
-
-.admin-nav,
-.admin-container {
-  @include float( left );
 }

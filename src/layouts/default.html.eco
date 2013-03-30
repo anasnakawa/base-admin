@@ -133,48 +133,6 @@
 	<div class="container">
 	  
 	  <div class="row">
-	    <div class="span3">
-	      <ul class="nav nav-tabs nav-stacked">
-	        <style type="text/css">
-	          .nav-stacked .badge,
-	          .nav-stacked .label {
-	            float: right;
-	          }
-	        </style>
-	        <li><a href="#"><i class="icon-dashboard"></i> Dashboard</a></li>
-	        <li><a href="/charts.html"><i class="icon-bar-chart"></i> Charts</a></li>
-	        <li><a href="#"><i class="icon-check"></i> UI Elements</a></li>	        
-	        <li><a href="#"><i class="icon-font"></i> Typography</a></li>
-	        <li><a href="#"><i class="icon-calendar"></i> Calendar</a></li>
-	        <li><a href="#"><i class="icon-phone"></i> Image Gallery</a></li>
-	        <li><a href="#"><i class="icon-file"></i> File Manager</a></li>
-	        <li><a href="#"><i class="icon-exclamation-sign"></i> Notifications<span class="badge badge-important">10</span></a></li>
-	        <li><a href="#"><i class="icon-plane"></i> Tour</a></li>
-	        <li><a href="#"><i class="icon-book"></i> Documentation<span class="label label-warning">Updated</span></a></li>
-	        <li><a href="#"><i class="icon-magic"></i> Extras<span class="label label-info">New</span></a></li>
-	        <li><a href="#"><i class="icon-remove"></i> Error Pages</a></li>
-	        
-	        <li><a href="#"><i class="icon-th"></i> Grid / Scaffolding<span class="label">un-used</span></a></li>
-	        <li><a href="#"><i class="icon-sign-blank"></i> Widgets<span class="label">un-used</span></a></li>
-	        <li><a href="#"><i class="icon-th-large"></i> Tables<span class="label">un-used</span></a></li>
-	        <li><a href="#"><i class="icon-dashboard"></i> Dashboard<span class="label">un-used</span></a></li>
-	        <li><a href="#"><i class="icon-check"></i> UI Elements<span class="label">un-used</span></a></li>
-	        <li><a href="#"><i class="icon-bar-chart"></i> Charts<span class="label">un-used</span></a></li>
-	        <li><a href="#"><i class="icon-calendar"></i> Calendar<span class="label">un-used</span></a></li>
-	        <li><a href="#"><i class="icon-font"></i> Typography<span class="label">un-used</span></a></li>
-	        <li><a href="#"><i class="icon-file-alt"></i> File Manager<span class="label">un-used</span></a></li>
-	        <li><a href="#"><i class="icon-picture"></i> Gallery<span class="label">un-used</span></a></li>
-	        <li><a href="#"><i class="icon-exclamation-sign"></i> Notifications<span class="label">un-used</span></a></li>
-	        <li><a href="#"><i class="icon-comment"></i> Chat App<span class="label">un-used</span></a></li>
-	        <li><a href="#"><i class="icon-rss"></i> Rss Reader<span class="label">un-used</span></a></li>
-	        <li><a href="#"><i class="icon-envelope"></i> Mail App<span class="label">un-used</span></a></li>
-        <!-- <% for document in @getDatabase().findAll( nav: 'root', hidden: $exists: false, [order: 1] ).toJSON(): %>
-          <li class="<%= 'active' if @document.url is document.url %>">
-            <a href="<%= document.url %>" property="dc:title"><%= document.title %></a>
-          </li>
-        <% end %> -->
-        </ul> <!-- .nav -->
-	    </div> <!-- .span3 -->
 	    <div id="content" class="span9 content">
 	      <%- @content %>
 	    </div> <!-- .content-->
