@@ -1,0 +1,9 @@
+{
+  "name": "breakpoints",
+  "version": "0.0.0",
+  "commit": "9310e15aeae4adb4a37a812cfe9334ad2e5cd6e3",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/xoxco/breakpoints.git"
+  }
+}

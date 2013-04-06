@@ -11,6 +11,7 @@
     "morris.js": "~0.4.1",
     "holderjs": "~1.9.0",
     "Flotr2": "git://github.com/HumbleSoftware/Flotr2.git",
-    "raphael": "~2.1.0"
+    "raphael": "~2.1.0",
+    "breakpoints": "git://github.com/xoxco/breakpoints.git"
   }
 }

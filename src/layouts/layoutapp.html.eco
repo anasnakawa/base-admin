@@ -88,6 +88,7 @@ layout: 'layout-master'
     </div> <!-- .navbar-inner -->
   </div> <!-- .navbar-fixed-top -->
   
+  <div class="container-fluid">
   <!-- side navigation -->
   <div class="admin-nav">
     <ul class="nav nav-tabs nav-stacked">
@@ -128,9 +129,11 @@ layout: 'layout-master'
   
   <!-- container -->
   <div class="admin-container">
-    <div class="row">
+    <div class="row-fluid">
       <div id="content" class="span12 content">
         <%- @content %>
       </div> <!-- .content-->
     </div> <!-- .row -->
   </div> <!-- .container -->
+  
+  </div> <!-- .container-fluid -->

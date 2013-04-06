@@ -1,9 +1,10 @@
 ---
 title     : 'Charts'
-layout    : 'layout-app'
+layout    : page
 category  : 'charts'
 nav       : 'root'
 order     : 2
+isHidden  : true
 jsFiles   : [ '/components/flot/jquery.flot.js', '/components/raphael/raphael.js', '/components/morris.js/morris.js', '/components/Chart.js/Chart.js', '/scripts/pages/page-charts.js' ]
 ---
 

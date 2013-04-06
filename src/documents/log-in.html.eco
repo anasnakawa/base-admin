@@ -1,6 +1,6 @@
 ---
 title     : 'Log In'
-layout    : 'master'
+layout    : default
 isHidden  : true
 ---
 

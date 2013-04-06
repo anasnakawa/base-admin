@@ -4,175 +4,90 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 <head>
-	<!-- Meta -->
-	<meta charset="utf-8" />
-	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <!-- Meta -->
+  <meta charset="utf-8" />
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 
-	<!-- Use the .htaccess and remove these lines to avoid edge case issues.
-	   More info: h5bp.com/i/378 -->
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <!-- Use the .htaccess and remove these lines to avoid edge case issues.
+     More info: h5bp.com/i/378 -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
-	<!-- Our site title and description -->
-	<title><%= @getPreparedTitle() %></title>
-	<meta name="description" content="<%= @getPreparedDescription() %>" />
-	<meta name="keywords" content="<%= @getPreparedKeywords() %>" />
-	<meta name="author" content="<%= @site.author or '' %>" />
+  <!-- Our site title and description -->
+  <title><%= @getPreparedTitle() %></title>
+  <meta name="description" content="<%= @getPreparedDescription() %>" />
+  <meta name="keywords" content="<%= @getPreparedKeywords() %>" />
+  <meta name="author" content="<%= @site.author or '' %>" />
 
-	<!-- Output DocPad produced meta elements -->
-	<%- @getBlock('meta').toHTML() %>
+  <!-- Output DocPad produced meta elements -->
+  <%- @getBlock('meta').toHTML() %>
 
-	<!-- Mobile viewport optimized: h5bp.com/viewport -->
-	<meta name="viewport" content="width=device-width" />
+  <!-- Mobile viewport optimized: h5bp.com/viewport -->
+  <meta name="viewport" content="width=device-width" />
 
-	<!-- Icons -->
+  <!-- Icons -->
   <link rel="shortcut icon" href="ico/favicon.ico">
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="ico/apple-touch-icon-144-precomposed.png">
   <link rel="apple-touch-icon-precomposed" sizes="114x114" href="ico/apple-touch-icon-114-precomposed.png">
   <link rel="apple-touch-icon-precomposed" sizes="72x72" href="ico/apple-touch-icon-72-precomposed.png">
   <link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png">
 
-	<!-- Shims: IE6-8 support of HTML5 elements -->
-	<!--[if lt IE 9]>
-		<script async src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-	<![endif]-->
+  <!-- Shims: IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script async src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
 
-	<!-- Styles -->
-	<% styles = [] %>
-	<% styles.push( '/components/bootstrap-sass/bootstrap-2.3.1.css' ) %>
-	<% styles.push( '/components/bootstrap-sass/bootstrap-responsive-2.3.1.css' )%>
-	<% styles.push( '/components/font-awesome/css/font-awesome.css' ) %>
-	<% styles.push( '/css/app-ltr.css' ) %>
-	<%- @getBlock( 'styles' ).add( styles ).toHTML() %>
+  <!-- Styles -->
+  <% styles = [] %>
+  <% styles.push( '/components/bootstrap-sass/bootstrap-2.3.1.css' ) %>
+  <% styles.push( '/components/bootstrap-sass/bootstrap-responsive-2.3.1.css' )%>
+  <% styles.push( '/components/font-awesome/css/font-awesome.css' ) %>
+  <% styles.push( '/css/app-ltr.css' ) %>
+  <%- @getBlock( 'styles' ).add( styles ).toHTML() %>
 </head>
 <body>
-	<!-- Markup -->
-	<div class="navbar navbar-fixed-top">
-		<div class="navbar-inner">
-			<div class="container">
-			  
-			  <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-			  
-				<a class="brand" href="/">Base Admin</a>
-				<div class="nav-collapse collapse">
-				  <ul class="nav pull-right">
-            
-            <li>
-              <a href="#">
-                <i class="icon-bullhorn"></i>
-                <span class="badge badge-important">10</span>
-              </a>
-            </li>
-            
-            <li class="divider-vertical"></li>
-            
-            <li>
-              <a href="">
-                <i class="icon-envelope"></i>
-                <span class="badge badge-important">15</span>
-              </a>
-            </li>
-				    
-				    <li class="divider-vertical"></li>
-				    
-				    <li class="dropdown">
-				      
-				      <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                <img data-src="holder.js/16x16" />
-                John Doe
-                <b class="caret"></b>
-              </a>
-              
-              <ul class="dropdown-menu">
-                
-                <li>
-                  <a href="#">
-                    <i class="icon-user"></i>
-                    Your Profile
-                  </a>
-                </li>
-                
-                <li>
-                  <a href="#">
-                    <i class="icon-circle-arrow-up"></i>
-                    Upgrade <span class="label label-warning">Pro</span>
-                  </a>
-                </li>
-                
-                <li class="divider"></li>
-                
-                <li>
-                  <a href="#">
-                    <i class="icon-cogs"></i>
-                    Account Settings
-                  </a>
-                </li>
-                
-                <li>
-                  <a href="/log-in.html">
-                    <i class="icon-signout"></i>
-                    Log Out
-                  </a>
-                </li>
-                
-              </ul>
-				    </li> <!-- .dropdown account -->
-            <!-- <% for document in @getCollection( 'pages' ).toJSON(): %>
-              <li typeof="sioc:Page" about="<%= document.url %>" class="<%= 'active'  if @document.url is document.url %>">
-                <a href="<%= document.url %>" property="dc:title"><%= document.title %></a>
-              </li>
-            <% end %> -->
-          </ul> <!-- .nav -->
-				</div><!-- .nav-collapse -->
-			</div> <!-- .container -->
-		</div> <!-- .navbar-inner -->
-	</div> <!-- .navbar-fixed-top -->
-	<div class="container">
-	  
-	  <div class="row">
-	    <div id="content" class="span9 content">
-	      <%- @content %>
-	    </div> <!-- .content-->
-	  </div> <!-- .row -->
-		<footer>
-		  <hr />
-			<p style="float: left;">&copy; Base Admin <%= @site.date.getFullYear() %></p>
-			<p style="float: right;">
-				<i class="muted">updated at </i><%= @site.date.toString() %>
-			</p>
-		</footer>
-	</div><!-- /container -->
+  
+  <div class="root"><%- @content %></div>
+  
+  
+  <!-- div class="container-fluid">
+    <footer>
+      <hr />
+      <p style="float: left;">&copy; Base Admin <%= @site.date.getFullYear() %></p>
+      <p style="float: right;">
+        <i class="muted">updated at </i><%= @site.date.toString() %>
+      </p>
+    </footer>
+  </div><!-- /container -->
 
-	<!-- Scripts -->
-	<% scripts = [] %>
-	<% scripts.push( '/vendor/log.js' ) %>
-	<% scripts.push( '/vendor/modernizr.js' ) %>
-	<% scripts.push( '/components/jquery/jquery.js' ) %>
-	<% scripts.push( '/components/underscore/underscore.js' ) %>
-	<% scripts.push( '/components/bootstrap-sass/js/bootstrap-transition.js' ) %>
-	<% scripts.push( '/components/bootstrap-sass/js/bootstrap-alert.js' ) %>
-	<% scripts.push( '/components/bootstrap-sass/js/bootstrap-modal.js' ) %>
-	<% scripts.push( '/components/bootstrap-sass/js/bootstrap-dropdown.js' ) %>
-	<% scripts.push( '/components/bootstrap-sass/js/bootstrap-scrollspy.js' ) %>
-	<% scripts.push( '/components/bootstrap-sass/js/bootstrap-tab.js' ) %>
-	<% scripts.push( '/components/bootstrap-sass/js/bootstrap-tooltip.js' ) %>
-	<% scripts.push( '/components/bootstrap-sass/js/bootstrap-popover.js' ) %>
-	<% scripts.push( '/components/bootstrap-sass/js/bootstrap-button.js' ) %>
-	<% scripts.push( '/components/bootstrap-sass/js/bootstrap-collapse.js' ) %>
-	<% scripts.push( '/components/bootstrap-sass/js/bootstrap-carousel.js' ) %>
-	<% scripts.push( '/components/bootstrap-sass/js/bootstrap-typeahead.js' ) %>
-	<% scripts.push( '/components/bootstrap-sass/js/bootstrap-affix.js' ) %>
-	<% scripts.push( '/components/holderjs/holder.js' ) %>
-	<% scripts.push( '/scripts/common/common-plugins.js' ) %>
-	<% if @document.meta.jsFiles: %>
-	 <% for jsFile in @document.meta.jsFiles: %>
-	   <% scripts.push( jsFile ) %>
-	 <% end %>
-	<% end %>
-	<% scripts.push( '/scripts/main.js' ) %>
-	<%- @getBlock( 'scripts' ).add( scripts ).toHTML() %>
+  <!-- Scripts -->
+  <% scripts = [] %>
+  <% scripts.push( '/vendor/log.js' ) %>
+  <% scripts.push( '/vendor/modernizr.js' ) %>
+  <% scripts.push( '/components/jquery/jquery.js' ) %>
+  <% scripts.push( '/components/underscore/underscore.js' ) %>
+  <% scripts.push( '/components/bootstrap-sass/js/bootstrap-transition.js' ) %>
+  <% scripts.push( '/components/bootstrap-sass/js/bootstrap-alert.js' ) %>
+  <% scripts.push( '/components/bootstrap-sass/js/bootstrap-modal.js' ) %>
+  <% scripts.push( '/components/bootstrap-sass/js/bootstrap-dropdown.js' ) %>
+  <% scripts.push( '/components/bootstrap-sass/js/bootstrap-scrollspy.js' ) %>
+  <% scripts.push( '/components/bootstrap-sass/js/bootstrap-tab.js' ) %>
+  <% scripts.push( '/components/bootstrap-sass/js/bootstrap-tooltip.js' ) %>
+  <% scripts.push( '/components/bootstrap-sass/js/bootstrap-popover.js' ) %>
+  <% scripts.push( '/components/bootstrap-sass/js/bootstrap-button.js' ) %>
+  <% scripts.push( '/components/bootstrap-sass/js/bootstrap-collapse.js' ) %>
+  <% scripts.push( '/components/bootstrap-sass/js/bootstrap-carousel.js' ) %>
+  <% scripts.push( '/components/bootstrap-sass/js/bootstrap-typeahead.js' ) %>
+  <% scripts.push( '/components/bootstrap-sass/js/bootstrap-affix.js' ) %>
+  <% scripts.push( '/components/holderjs/holder.js' ) %>
+  <% scripts.push( '/components/breakpoints/breakpoints.js' ) %>
+  <% scripts.push( '/scripts/common/common-plugins.js' ) %>
+  <% scripts.push( '/scripts/common/common-off-canvas-nav.js' ) %>
+  <% if @document.meta.jsFiles: %>
+   <% for jsFile in @document.meta.jsFiles: %>
+     <% scripts.push( jsFile ) %>
+   <% end %>
+  <% end %>
+  <% scripts.push( '/scripts/main.js' ) %>
+  <%- @getBlock( 'scripts' ).add( scripts ).toHTML() %>
 </body>
 </html>

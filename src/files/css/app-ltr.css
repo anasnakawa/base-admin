@@ -16,6 +16,20 @@
   float: right;
 }
 
+/* line 26, ../sass/commons/_side-nav.scss */
+.sidebar-nav-fixed {
+  padding: 9px 0;
+  position: fixed;
+  left: 20px;
+  top: 60px;
+  width: 250px;
+}
+
+/* line 34, ../sass/commons/_side-nav.scss */
+.row-fluid > .span-fixed-sidebar {
+  margin-left: 290px;
+}
+
 /* line 19, ../sass/components/_chart-js.scss */
 .chart-js {
   width: 100% !important;
