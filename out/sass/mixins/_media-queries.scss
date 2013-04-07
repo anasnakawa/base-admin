@@ -143,6 +143,12 @@ $mq-desktop           : 1200px !default;
   }
 }
 
+@mixin tablet-and-below {
+  @media only screen and (max-width : $mq-tablet-landscape) {
+    @content;
+  }
+}
+
 // Everything larger than portrait tablet
 @mixin tablet-landscape-and-up {
   @media only screen and (min-width : $mq-tablet-portrait + 1) {

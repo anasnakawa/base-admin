@@ -31,6 +31,24 @@
     width:250px;
 }
 
-.row-fluid > .span-fixed-sidebar {
+.content-fixed-sidebar {
     margin-left: 290px;
+}
+
+@include tablet-and-below {
+  
+  // default mode
+  // hide sidebar
+  .nav-off-canvas {
+    display: none;
+  }
+  
+  .navbar .btn-off-canvas {
+    @include float( left );
+  }
+  
+  .content-off-canvas {
+    width: 100%;
+    @include margin-left( 0 );
+  }
 }

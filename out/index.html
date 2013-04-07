@@ -46,12 +46,12 @@
 </head>
 <body>
   
-  <div class="root"><!-- navigation -->
+  <!-- navigation -->
   <div class="navbar navbar-fixed-top">
     <div class="navbar-inner">
       <div class="container-fluid">
         
-        <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <button type="button" class="btn btn-navbar btn-off-canvas" data-toggle="collapse" data-target=".nav-collapse">
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
@@ -129,64 +129,51 @@
   </div> <!-- .navbar-fixed-top -->
   
   <div class="container-fluid">
-    <div class="row-fluid">
-      <div class="span3" data-off-canvas="nav">
-        <div class="sidebar-nav-fixed">
-          <ul class="nav nav-tabs nav-stacked sidebar-nav-fixed">
-  
-            <li><a href="#"><i class="icon-dashboard"></i> Dashboard</a></li>
-            <li><a href="/charts.html"><i class="icon-bar-chart"></i> Charts</a></li>
-            <li><a href="#"><i class="icon-check"></i> UI Elements</a></li>         
-            <li><a href="#"><i class="icon-font"></i> Typography</a></li>
-            <li><a href="#"><i class="icon-calendar"></i> Calendar</a></li>
-            <li><a href="#"><i class="icon-phone"></i> Image Gallery</a></li>
-            <li><a href="#"><i class="icon-file"></i> File Manager</a></li>
-            <li><a href="#"><i class="icon-exclamation-sign"></i> Notifications<span class="badge badge-important">10</span></a></li>
-            <li><a href="#"><i class="icon-plane"></i> Tour</a></li>
-            <li><a href="#"><i class="icon-book"></i> Documentation<span class="label label-warning">Updated</span></a></li>
-            <li><a href="#"><i class="icon-magic"></i> Extras<span class="label label-info">New</span></a></li>
-            <li><a href="#"><i class="icon-remove"></i> Error Pages</a></li>
-            
-            <li><a href="#"><i class="icon-th"></i> Grid / Scaffolding<span class="label">un-used</span></a></li>
-            <li><a href="#"><i class="icon-sign-blank"></i> Widgets<span class="label">un-used</span></a></li>
-            <li><a href="#"><i class="icon-th-large"></i> Tables<span class="label">un-used</span></a></li>
-            <li><a href="#"><i class="icon-dashboard"></i> Dashboard<span class="label">un-used</span></a></li>
-            <li><a href="#"><i class="icon-check"></i> UI Elements<span class="label">un-used</span></a></li>
-            <li><a href="#"><i class="icon-bar-chart"></i> Charts<span class="label">un-used</span></a></li>
-            <li><a href="#"><i class="icon-calendar"></i> Calendar<span class="label">un-used</span></a></li>
-            <li><a href="#"><i class="icon-font"></i> Typography<span class="label">un-used</span></a></li>
-            <li><a href="#"><i class="icon-file-alt"></i> File Manager<span class="label">un-used</span></a></li>
-            <li><a href="#"><i class="icon-picture"></i> Gallery<span class="label">un-used</span></a></li>
-            <li><a href="#"><i class="icon-exclamation-sign"></i> Notifications<span class="label">un-used</span></a></li>
-            <li><a href="#"><i class="icon-comment"></i> Chat App<span class="label">un-used</span></a></li>
-            <li><a href="#"><i class="icon-rss"></i> Rss Reader<span class="label">un-used</span></a></li>
-            <li><a href="#"><i class="icon-envelope"></i> Mail App<span class="label">un-used</span></a></li>
-          </ul>
-        </div><!--/.well -->
-      </div><!--/span-->
-  
-      <div class="span9 span-fixed-sidebar" data-off-canvas="content">
-        <div class="row-fluid">
-          <div class="span12">
-            <h1>Helllo Index Page</h1>
-          </div>
-        </div>
-      </div><!--/span-->
-    </div><!--/row-->
-  
-  </div><!--/.fluid-container--></div>
-  
-  
-  <!-- div class="container-fluid">
-    <footer>
-      <hr />
-      <p style="float: left;">&copy; Base Admin 2013</p>
-      <p style="float: right;">
-        <i class="muted">updated at </i>Sat Apr 06 2013 22:01:48 GMT+0400 (GST)
-      </p>
-    </footer>
-  </div><!-- /container -->
+    <div class="sidebar-nav-fixed nav-off-canvas">
+      
+      <ul class="nav nav-tabs nav-stacked">
 
+        <li><a href="#"><i class="icon-dashboard"></i> Dashboard</a></li>
+        <li><a href="/charts.html"><i class="icon-bar-chart"></i> Charts</a></li>
+        <li><a href="#"><i class="icon-check"></i> UI Elements</a></li>         
+        <li><a href="#"><i class="icon-font"></i> Typography</a></li>
+        <li><a href="#"><i class="icon-calendar"></i> Calendar</a></li>
+        <li><a href="#"><i class="icon-phone"></i> Image Gallery</a></li>
+        <li><a href="#"><i class="icon-file"></i> File Manager</a></li>
+        <li><a href="#"><i class="icon-exclamation-sign"></i> Notifications<span class="badge badge-important">10</span></a></li>
+        <li><a href="#"><i class="icon-plane"></i> Tour</a></li>
+        <li><a href="#"><i class="icon-book"></i> Documentation<span class="label label-warning">Updated</span></a></li>
+        <li><a href="#"><i class="icon-magic"></i> Extras<span class="label label-info">New</span></a></li>
+        <li><a href="#"><i class="icon-remove"></i> Error Pages</a></li>
+        
+        <li><a href="#"><i class="icon-th"></i> Grid / Scaffolding<span class="label">un-used</span></a></li>
+        <li><a href="#"><i class="icon-sign-blank"></i> Widgets<span class="label">un-used</span></a></li>
+        <li><a href="#"><i class="icon-th-large"></i> Tables<span class="label">un-used</span></a></li>
+        <li><a href="#"><i class="icon-dashboard"></i> Dashboard<span class="label">un-used</span></a></li>
+        <li><a href="#"><i class="icon-check"></i> UI Elements<span class="label">un-used</span></a></li>
+        <li><a href="#"><i class="icon-bar-chart"></i> Charts<span class="label">un-used</span></a></li>
+        <li><a href="#"><i class="icon-calendar"></i> Calendar<span class="label">un-used</span></a></li>
+        <li><a href="#"><i class="icon-font"></i> Typography<span class="label">un-used</span></a></li>
+        <li><a href="#"><i class="icon-file-alt"></i> File Manager<span class="label">un-used</span></a></li>
+        <li><a href="#"><i class="icon-picture"></i> Gallery<span class="label">un-used</span></a></li>
+        <li><a href="#"><i class="icon-exclamation-sign"></i> Notifications<span class="label">un-used</span></a></li>
+        <li><a href="#"><i class="icon-comment"></i> Chat App<span class="label">un-used</span></a></li>
+        <li><a href="#"><i class="icon-rss"></i> Rss Reader<span class="label">un-used</span></a></li>
+        <li><a href="#"><i class="icon-envelope"></i> Mail App<span class="label">un-used</span></a></li>
+      </ul>
+      
+    </div><!--/span-->
+
+    <div class="content-fixed-sidebar content-off-canvas">
+      <div class="row-fluid">
+        <div class="span12">
+          <h1>Helllo Index Page</h1>
+        </div>
+      </div>
+    </div><!--/span-->
+  
+  </div><!--/.fluid-container-->
+  
   <!-- Scripts -->
   
   
@@ -211,7 +198,6 @@
   
   
   
-  
-  <script defer="defer"  src="/vendor/log.js"></script><script defer="defer"  src="/vendor/modernizr.js"></script><script defer="defer"  src="/components/jquery/jquery.js"></script><script defer="defer"  src="/components/underscore/underscore.js"></script><script defer="defer"  src="/components/bootstrap-sass/js/bootstrap-transition.js"></script><script defer="defer"  src="/components/bootstrap-sass/js/bootstrap-alert.js"></script><script defer="defer"  src="/components/bootstrap-sass/js/bootstrap-modal.js"></script><script defer="defer"  src="/components/bootstrap-sass/js/bootstrap-dropdown.js"></script><script defer="defer"  src="/components/bootstrap-sass/js/bootstrap-scrollspy.js"></script><script defer="defer"  src="/components/bootstrap-sass/js/bootstrap-tab.js"></script><script defer="defer"  src="/components/bootstrap-sass/js/bootstrap-tooltip.js"></script><script defer="defer"  src="/components/bootstrap-sass/js/bootstrap-popover.js"></script><script defer="defer"  src="/components/bootstrap-sass/js/bootstrap-button.js"></script><script defer="defer"  src="/components/bootstrap-sass/js/bootstrap-collapse.js"></script><script defer="defer"  src="/components/bootstrap-sass/js/bootstrap-carousel.js"></script><script defer="defer"  src="/components/bootstrap-sass/js/bootstrap-typeahead.js"></script><script defer="defer"  src="/components/bootstrap-sass/js/bootstrap-affix.js"></script><script defer="defer"  src="/components/holderjs/holder.js"></script><script defer="defer"  src="/components/breakpoints/breakpoints.js"></script><script defer="defer"  src="/scripts/common/common-plugins.js"></script><script defer="defer"  src="/scripts/common/common-off-canvas-nav.js"></script><script defer="defer"  src="/scripts/main.js"></script>
+  <script defer="defer"  src="/vendor/log.js"></script><script defer="defer"  src="/vendor/modernizr.js"></script><script defer="defer"  src="/components/jquery/jquery.js"></script><script defer="defer"  src="/components/underscore/underscore.js"></script><script defer="defer"  src="/components/bootstrap-sass/js/bootstrap-transition.js"></script><script defer="defer"  src="/components/bootstrap-sass/js/bootstrap-alert.js"></script><script defer="defer"  src="/components/bootstrap-sass/js/bootstrap-modal.js"></script><script defer="defer"  src="/components/bootstrap-sass/js/bootstrap-dropdown.js"></script><script defer="defer"  src="/components/bootstrap-sass/js/bootstrap-scrollspy.js"></script><script defer="defer"  src="/components/bootstrap-sass/js/bootstrap-tab.js"></script><script defer="defer"  src="/components/bootstrap-sass/js/bootstrap-tooltip.js"></script><script defer="defer"  src="/components/bootstrap-sass/js/bootstrap-popover.js"></script><script defer="defer"  src="/components/bootstrap-sass/js/bootstrap-button.js"></script><script defer="defer"  src="/components/bootstrap-sass/js/bootstrap-collapse.js"></script><script defer="defer"  src="/components/bootstrap-sass/js/bootstrap-carousel.js"></script><script defer="defer"  src="/components/bootstrap-sass/js/bootstrap-typeahead.js"></script><script defer="defer"  src="/components/bootstrap-sass/js/bootstrap-affix.js"></script><script defer="defer"  src="/components/holderjs/holder.js"></script><script defer="defer"  src="/scripts/common/common-plugins.js"></script><script defer="defer"  src="/scripts/common/common-off-canvas-nav.js"></script><script defer="defer"  src="/scripts/main.js"></script>
 </body>
 </html>

@@ -46,19 +46,8 @@
 </head>
 <body>
   
-  <div class="root"><%- @content %></div>
+  <%- @content %>
   
-  
-  <!-- div class="container-fluid">
-    <footer>
-      <hr />
-      <p style="float: left;">&copy; Base Admin <%= @site.date.getFullYear() %></p>
-      <p style="float: right;">
-        <i class="muted">updated at </i><%= @site.date.toString() %>
-      </p>
-    </footer>
-  </div><!-- /container -->
-
   <!-- Scripts -->
   <% scripts = [] %>
   <% scripts.push( '/vendor/log.js' ) %>
@@ -79,7 +68,6 @@
   <% scripts.push( '/components/bootstrap-sass/js/bootstrap-typeahead.js' ) %>
   <% scripts.push( '/components/bootstrap-sass/js/bootstrap-affix.js' ) %>
   <% scripts.push( '/components/holderjs/holder.js' ) %>
-  <% scripts.push( '/components/breakpoints/breakpoints.js' ) %>
   <% scripts.push( '/scripts/common/common-plugins.js' ) %>
   <% scripts.push( '/scripts/common/common-off-canvas-nav.js' ) %>
   <% if @document.meta.jsFiles: %>

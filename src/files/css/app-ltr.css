@@ -26,10 +26,27 @@
 }
 
 /* line 34, ../sass/commons/_side-nav.scss */
-.row-fluid > .span-fixed-sidebar {
+.content-fixed-sidebar {
   margin-left: 290px;
 }
 
+@media only screen and (max-width: 980px) {
+  /* line 42, ../sass/commons/_side-nav.scss */
+  .nav-off-canvas {
+    display: none;
+  }
+
+  /* line 46, ../sass/commons/_side-nav.scss */
+  .navbar .btn-off-canvas {
+    float: left;
+  }
+
+  /* line 50, ../sass/commons/_side-nav.scss */
+  .content-off-canvas {
+    width: 100%;
+    margin-left: 0;
+  }
+}
 /* line 19, ../sass/components/_chart-js.scss */
 .chart-js {
   width: 100% !important;
