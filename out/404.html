@@ -51,7 +51,7 @@
     <div class="navbar-inner">
       <div class="container-fluid">
         
-        <button type="button" class="btn btn-navbar btn-off-canvas" data-toggle="collapse" data-target=".nav-collapse">
+        <button type="button" class="btn btn-navbar btn-off-canvas">
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
@@ -128,11 +128,11 @@
     </div> <!-- .navbar-inner -->
   </div> <!-- .navbar-fixed-top -->
   
-  <div class="container-fluid">
+  <div class="container-nav-off-canvas">
     <div class="sidebar-nav-fixed nav-off-canvas">
-      
+        
       <ul class="nav nav-tabs nav-stacked">
-
+  
         <li><a href="#"><i class="icon-dashboard"></i> Dashboard</a></li>
         <li><a href="/charts.html"><i class="icon-bar-chart"></i> Charts</a></li>
         <li><a href="#"><i class="icon-check"></i> UI Elements</a></li>         
@@ -163,6 +163,9 @@
       </ul>
       
     </div><!--/span-->
+  </div>
+  
+  <div class="container-fluid container-content-off-canvas">
 
     <div class="content-fixed-sidebar content-off-canvas">
       <div class="row-fluid">
@@ -203,6 +206,40 @@
   
   
   
-  <script defer="defer"  src="/vendor/log.js"></script><script defer="defer"  src="/vendor/modernizr.js"></script><script defer="defer"  src="/components/jquery/jquery.js"></script><script defer="defer"  src="/components/underscore/underscore.js"></script><script defer="defer"  src="/components/bootstrap-sass/js/bootstrap-transition.js"></script><script defer="defer"  src="/components/bootstrap-sass/js/bootstrap-alert.js"></script><script defer="defer"  src="/components/bootstrap-sass/js/bootstrap-modal.js"></script><script defer="defer"  src="/components/bootstrap-sass/js/bootstrap-dropdown.js"></script><script defer="defer"  src="/components/bootstrap-sass/js/bootstrap-scrollspy.js"></script><script defer="defer"  src="/components/bootstrap-sass/js/bootstrap-tab.js"></script><script defer="defer"  src="/components/bootstrap-sass/js/bootstrap-tooltip.js"></script><script defer="defer"  src="/components/bootstrap-sass/js/bootstrap-popover.js"></script><script defer="defer"  src="/components/bootstrap-sass/js/bootstrap-button.js"></script><script defer="defer"  src="/components/bootstrap-sass/js/bootstrap-collapse.js"></script><script defer="defer"  src="/components/bootstrap-sass/js/bootstrap-carousel.js"></script><script defer="defer"  src="/components/bootstrap-sass/js/bootstrap-typeahead.js"></script><script defer="defer"  src="/components/bootstrap-sass/js/bootstrap-affix.js"></script><script defer="defer"  src="/components/holderjs/holder.js"></script><script defer="defer"  src="/scripts/common/common-plugins.js"></script><script defer="defer"  src="/scripts/common/common-off-canvas-nav.js"></script><script defer="defer"  src="/scripts/main.js"></script>
+  <script >(function(){
+	// Did we just livereload?
+var log = true && localStorage && console && console.log && true;
+if ( log && localStorage.getItem('/docpad-livereload/reloaded') === 'yes' ) {
+	localStorage.removeItem('/docpad-livereload/reloaded');
+	console.log('LiveReloaded at', new Date())
+}
+
+// Listen for the regenerated event
+// and perform a reload of the page when the event occurs
+var listen = function(){
+	var socket = io.connect('/docpad-livereload');
+	socket.on('regenerated',function(){
+		if ( log ) {
+	localStorage.setItem('/docpad-livereload/reloaded', 'yes');
+}
+document.location.reload();
+	});
+};
+	if ( typeof io !== 'undefined' ) {
+		listen();
+	} else {
+		// Inject socket.io into our page then listen once loaded
+var inject = function(){
+	var t = document.createElement('script');
+	t.type = 'text/javascript';
+	t.async = true;
+	t.src = '/socket.io/socket.io.js';
+	t.onload = listen;
+	var s = document.getElementsByTagName('script')[0];
+	s.parentNode.insertBefore(t,s);
+};
+		inject();
+	}
+})();</script><script defer="defer"  src="/vendor/log.js"></script><script defer="defer"  src="/vendor/modernizr.js"></script><script defer="defer"  src="/components/jquery/jquery.js"></script><script defer="defer"  src="/components/underscore/underscore.js"></script><script defer="defer"  src="/components/bootstrap-sass/js/bootstrap-transition.js"></script><script defer="defer"  src="/components/bootstrap-sass/js/bootstrap-alert.js"></script><script defer="defer"  src="/components/bootstrap-sass/js/bootstrap-modal.js"></script><script defer="defer"  src="/components/bootstrap-sass/js/bootstrap-dropdown.js"></script><script defer="defer"  src="/components/bootstrap-sass/js/bootstrap-scrollspy.js"></script><script defer="defer"  src="/components/bootstrap-sass/js/bootstrap-tab.js"></script><script defer="defer"  src="/components/bootstrap-sass/js/bootstrap-tooltip.js"></script><script defer="defer"  src="/components/bootstrap-sass/js/bootstrap-popover.js"></script><script defer="defer"  src="/components/bootstrap-sass/js/bootstrap-button.js"></script><script defer="defer"  src="/components/bootstrap-sass/js/bootstrap-collapse.js"></script><script defer="defer"  src="/components/bootstrap-sass/js/bootstrap-carousel.js"></script><script defer="defer"  src="/components/bootstrap-sass/js/bootstrap-typeahead.js"></script><script defer="defer"  src="/components/bootstrap-sass/js/bootstrap-affix.js"></script><script defer="defer"  src="/components/holderjs/holder.js"></script><script defer="defer"  src="/scripts/common/common-plugins.js"></script><script defer="defer"  src="/scripts/common/common-off-canvas-nav.js"></script><script defer="defer"  src="/scripts/main.js"></script>
 </body>
 </html>

@@ -46,6 +46,24 @@
     width: 100%;
     margin-right: 0;
   }
+
+  /* line 56, ../sass/commons/_side-nav.scss */
+  .off-canvas-expanded .nav-off-canvas {
+    display: block;
+  }
+  /* line 64, ../sass/commons/_side-nav.scss */
+  .off-canvas-expanded .container-off-canvas {
+    overflow: hidden;
+  }
+
+  /* line 70, ../sass/commons/_side-nav.scss */
+  .off-canvas-collapsed .nav-off-canvas {
+    display: none;
+  }
+  /* line 74, ../sass/commons/_side-nav.scss */
+  .off-canvas-collapsed .content-off-canvas {
+    visibility: visible;
+  }
 }
 /* line 19, ../sass/components/_chart-js.scss */
 .chart-js {

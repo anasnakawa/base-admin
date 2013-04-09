@@ -20,67 +20,50 @@
 (function( $, _ ) {
   
   // local vars
-  var $win = $(window)
-  , breakPoint = {
-      width: 1200
-    , over: 'over'
-    , below: 'below'
-  }
-  , breakPointChanged = function( breakPoint ) {
-    return $(window).width()
-  }
-  , $nav = $('[data-off-canvas="nav"]')
-  , $content = $('[data-off-canvas="content"]')
-  , below = 'exitBreakpoint'
-  , over = 'enterBreakpoint';
-  
-  console.log( $nav, $content );
-  
-  // caching current break point
-  $win.data('breakpoint', $win.width >= breakPoint.width ? breakPoint.over : breakPoint.below);
-  
-  // since resize method will be fired much more than we need
-  // throttle (from underscore.js) makes sure that resize handler
-  // will be fired no more than once in every 200 miliseconds
-  $win.resize( _.throttle(function() {
+  var $btnOffCanvas     = $('.btn-off-canvas')
+    , $contentOffCanvas = $('.content-off-canvas')
+    , $navOffCanvas     = $('.nav-off-canvas')
+    , states = {
+        EXPANDED  : 'off_canvas_expanded'
+      , COLLAPSED : 'off_canvas_collapsed'
+      , ATTR      : 'state'
+    };
     
-    
-    
-  }, 200) );
   
-  /* initiate break points
-  $win.setBreakpoints({
-      // use only largest available vs use all available
-      distinct: true, 
-      // array of widths in pixels where breakpoints
-      // should be triggered
-      breakpoints: [
-          320,
-          480,
-          768,
-          980,
-          1200
-      ] 
-  });
-  // */
-  $win.bind( below + '980 ' + over + '980', function(e) {
-    $('html').toggleClass('')
-  });
-  
-  // where should off canvas nav hidden
-  $win.bind(below + '980', function() {
-    // hide navigation
-    $nav.hide();
+  $btnOffCanvas.on('click', function() {
     
-    // stretch content
-    $content.css('width', '100%');
+    // first time
+    if( typeof $btnOffCanvas.data( states.ATTR ) === 'undefined' ) {
+      $btnOffCanvas.data( states.ATTR, states.COLLAPSED );
+    }
+    
+    switch( $btnOffCanvas.data( states.ATTR ) ) {
+      
+      case states.EXPANDED:
+        $btnOffCanvas.data( states.ATTR, states.COLLAPSED );
+        break;
+      case states.COLLAPSED:
+        $btnOffCanvas.data( states.ATTR, states.EXPANDED );
+        break;
+      
+    }
+    
+    // trigger custom event
+    $btnOffCanvas.trigger( $btnOffCanvas.data( states.ATTR ) );
     
   });
   
-  $win.bind(over + '980', function() {
-    $nav.show();
-    $content.css('width', null);
-  });
+  $btnOffCanvas.on( states.EXPANDED, function() {
+    $('html').addClass( states.EXPANDED.replace(/_/g, '-') ).removeClass( states.COLLAPSED.replace(/_/g, '-') );
+    
+    $contentOffCanvas.css('margin-left', $navOffCanvas.width() );
+  } );
+  
+  $btnOffCanvas.on( states.COLLAPSED, function() {
+    $('html').addClass( states.COLLAPSED.replace(/_/g, '-') ).removeClass( states.EXPANDED.replace(/_/g, '-') );
+    
+    $contentOffCanvas.css('margin-left', '');
+  } );
   
   
   

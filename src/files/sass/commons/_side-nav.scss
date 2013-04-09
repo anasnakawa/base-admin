@@ -51,4 +51,28 @@
     width: 100%;
     @include margin-left( 0 );
   }
+  
+  .off-canvas-expanded {
+    .nav-off-canvas {
+      display: block;
+    }
+    
+    .content-off-canvas {
+      
+    }
+    
+    .container-off-canvas {
+      overflow: hidden;
+    }
+  }
+  
+  .off-canvas-collapsed {
+    .nav-off-canvas {
+      display: none;
+    }
+    
+    .content-off-canvas {
+      visibility: visible;
+    }
+  }
 }
